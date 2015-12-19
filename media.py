@@ -1,3 +1,5 @@
+import webbrowser
+
 class Movie(object):
     '''
     A movie object that contains movie title, movie trailer
@@ -12,3 +14,7 @@ class Movie(object):
         self.poster_image_url = poster_img
         self.trailer_youtube_id = trailer_url
 
+    def show_trailer(self):
+        '''
+        '''
+        webbrowser.open(self.trailer_youtube_id)
