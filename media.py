@@ -1,11 +1,16 @@
 import webbrowser
 
-class Movie(object):
+
+class Movie():
     '''
-    A movie object that contains movie title, movie trailer, storyline and poster
+    A movie object that contains movie title, movie trailer,
+    storyline and poster
     '''
 
-    def __init__(self, title, storyline, poster_img, trailer_url):
+    # Class Variable for rating
+    VALID_RATINGS = ["G", "PG", "PG-13", "R"]
+
+    def __init__(self, title, storyline, poster_img, trailer_url, stars):
         '''
         Initialize instances for Movie object
         Args:
@@ -13,11 +18,13 @@ class Movie(object):
             storyline (str): Movie storyline
             poster_img (str): URL of the Movie poster
             trailer_url (str): URL of the Movie trailer
+            stars (list->str): List of stars
         '''
         self.title = title
         self.storyline = storyline
         self.poster_image_url = poster_img
         self.trailer_youtube_url = trailer_url
+        self.stars = stars
 
     def show_trailer(self):
         '''
