@@ -1,7 +1,6 @@
-import webbrowser
 import os
 import re
-
+import webbrowser
 
 # Styles and scripting for the page
 main_page_head = '''
@@ -19,6 +18,7 @@ main_page_head = '''
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
+            background-color: #D8D8D8;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -40,8 +40,9 @@ main_page_head = '''
             padding-top: 20px;
         }
         .movie-tile:hover {
-            background-color: #EEE;
+            background-color: black;
             cursor: pointer;
+            color: #EEE
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -124,7 +125,9 @@ main_page_content = '''
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
-    <h2>{movie_title}</h2>
+    <h1>{movie_title}</h1>
+    <h4><b>Starring:</b> {movie_stars}</h4>
+    <p>{movie_story}</p>
 </div>
 '''
 
@@ -145,7 +148,10 @@ def create_movie_tiles_content(movies):
         content += movie_tile_content.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
+                trailer_youtube_id=trailer_youtube_id,
+                movie_story=movie.storyline,
+                # Separate list element by |
+                movie_stars=" | ".join(movie.stars)
         )
     return content
 
