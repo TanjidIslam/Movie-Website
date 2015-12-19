@@ -33,8 +33,8 @@ darkKnight = media.Movie(
 # Conjuring movie instance
 conjuring = media.Movie(
         "The Conjuring",
-        "Based on a true-story, a couple who are paranormal investigator and "
-        + "demonologists, investigate on Perron Family..",
+        "Based on a true-story, a couple who are paranormal investigator " +
+        "and demonologists, investigate on Perron Family..",
         "http://resizing.flixster.com/9L9x-cvmFJF_K14OlJyEu9frubU=/800x1200"
         "/dkpu1ddg7pbsk.cloudfront.net/movie/11/17/39/11173945_ori.jpg",
         "https://www.youtube.com/watch?v=k10ETZ41q5o",
@@ -53,8 +53,8 @@ theShawshank = media.Movie(
 twelveAngry = media.Movie(
         "12 Angry Men",
         "Following the closing arguments in a murder trial, " +
-        "the 12 members of the jury must deliberate, with" +
-        " a guilty verdict meaning death for the accused, an inner-city teen..",
+        "the 12 members of the jury must deliberate, with a guilty verdict " +
+        "meaning death for the accused, an inner-city teen..",
         "http://d1zlh37f1ep3tj.cloudfront.net/wp/wblob/54592E651337D2/14FB/" +
         "2258BB/VhKL4g5oOWGtY05rs4NFJA/12angrymen.gif",
         "https://www.youtube.com/watch?v=A7CBKT0PWFA",
